@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demande de devis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="checkout">
+    <h2>Valider ma demande</h2>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">Aucun paiement ne sera prélevé ici. L'artiste vous contactera pour les modalités.</p>
+
+    <div id="order-summary" style="margin: 20px 0; padding: 15px; background: rgba(0,0,0,0.2); border-radius: 8px;"></div>
+
+    <form onsubmit="validerCommande(event)">
+        <input type="text" id="client-nom" placeholder="Votre Nom complet" required>
+        <input type="email" id="client-email" placeholder="Votre Email" required>
+        <textarea id="client-adresse" placeholder="Adresse ou informations de livraison" rows="4"></textarea>
+
+        <button type="submit" style="width: 100%; margin-top: 15px;">Envoyer ma demande à l'artiste</button>
+        <button type="button" onclick="window.location.href='index.html'" style="width: 100%; margin-top: 10px; background: transparent; border: 1px solid var(--primary);">Retour à la galerie</button>
+    </form>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

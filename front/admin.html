@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration Galerie</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-body">
+
+<div class="admin-container">
+    <div id="login" class="card">
+        <h2>Accès Artiste</h2>
+        <input type="password" id="password" placeholder="Code secret (1234)">
+        <button onclick="checkPassword()">Se connecter</button>
+    </div>
+
+    <div id="admin-panel" style="display:none;">
+        <button onclick="window.location.href='index.html'" style="margin-bottom:20px;">Retour à la galerie</button>
+
+        <div class="card">
+            <h3>Demandes de commandes / devis</h3>
+            <button onclick="fetchCommandes()">Actualiser les demandes</button>
+            <div id="commandesList"></div>
+        </div>
+
+        <div class="card">
+            <h3>Ajouter une Oeuvre</h3>
+            <input id="name" placeholder="Nom de l'oeuvre">
+            <select id="categorySelect"></select>
+            <input id="typeDessin" placeholder="Technique (Aquarelle, Feutre, etc.)">
+            <input id="taille" placeholder="Dimensions (ex: A4)">
+            <input id="prix" type="number" step="0.01" placeholder="Prix (€)">
+            <input type="file" id="imageFile" accept="image/*">
+            <textarea id="description" placeholder="Description de l'oeuvre" rows="3"></textarea>
+            <input id="stock" type="number" placeholder="Quantité dispo (ex: 1)">
+            <button onclick="saveProduct()">Ajouter au catalogue</button>
+        </div>
+
+        <div class="card">
+            <h3>Oeuvres au catalogue</h3>
+            <div id="productList"></div>
+        </div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie d'Art</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <h1 class="logo">Galerie d'Art</h1>
+    <nav id="nav-categories"></nav>
+    <div class="actions">
+        <button onclick="toggleCart()">Ma Sélection (<span id="cart-count">0</span>)</button>
+        <button onclick="window.location.href='admin.html'">Admin</button>
+    </div>
+</header>
+
+<main id="catalogue"></main>
+
+<div id="cart" class="cart hidden">
+    <h2>Ma Sélection</h2>
+    <div id="cart-items"></div>
+    <button onclick="goCheckout()" style="width: 100%; margin-top: 15px;">Demander un devis</button>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
